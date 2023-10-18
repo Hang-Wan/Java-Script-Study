@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let phone = {
+            name: 'iphone 14',
+            num: '123456789',
+            weight:'0.5kg',
+            address:'AUSTRALIA',
+            call: function (){
+                console.log('DingDing')
+            }
+        }
+        console.log(phone)
+        // search name
+        console.log( `before chagne: ${phone.name}`)
+        console.log([phone['name']]) //avoid '-,+'
+        //change
+        phone.name = 'iphone 15'
+        console.log( `after chagne: ${phone.name}`)
+        //add
+        phone.colour = 'blue'
+        console.log( `colour: ${phone.colour}`)
+        //delete
+        delete phone.weights
+        console.log(phone)
+        phone.call()
+        for(let i in phone){
+            console.log(i)//get string
+            console.log(phone[i])
+        }
+
+
+    </script>
+
+</body>
+</html>
